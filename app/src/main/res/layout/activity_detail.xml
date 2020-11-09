@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/detail_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_foreground"
+            android:textIsSelectable="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Title"
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@id/detail_image"
+            app:layout_constraintTop_toBottomOf="@id/detail_image"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/detail_created_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Created at"
+            android:textIsSelectable="true"
+            app:layout_constraintLeft_toLeftOf="@id/detail_title"
+            app:layout_constraintTop_toBottomOf="@id/detail_title"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="Description"
+            android:textIsSelectable="true"
+            app:layout_constraintLeft_toLeftOf="@id/detail_created_at"
+            app:layout_constraintTop_toBottomOf="@id/detail_created_at"
+            android:visibility="gone"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/detail_owner_icon_view"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toLeftOf="@id/description"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            tools:src="@tools:sample/avatars"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/detail_full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="name"
+            android:textIsSelectable="true"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/detail_username"
+            app:layout_constraintLeft_toRightOf="@id/detail_owner_icon_view"
+            app:layout_constraintTop_toTopOf="@+id/detail_owner_icon_view"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/detail_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="username"
+            android:textIsSelectable="true"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/detail_owner_icon_view"
+            app:layout_constraintLeft_toLeftOf="@id/detail_full_name"
+            app:layout_constraintTop_toBottomOf="@+id/detail_full_name"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
